@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPER CHOICE BD - Quality You Deserve</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Hind Siliguri -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            navyLight: '#1E293B',
+                            green: '#10B981',
+                            greenDark: '#059669',
+                            orange: '#F97316',
+                            red: '#EF4444',
+                            bg: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Hind Siliguri', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #F8FAFC;
+        }
+        /* Custom Smooth Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10B981;
+            border-radius: 4px;
+        }
+        .pulse-badge {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-emerald-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+                <a href="tel:01978847746" class="hover:text-emerald-400 transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-emerald-400"></i> <span>০১৯৭৮৮৪৭৭৪৬</span>
+                </a>
+                <a href="https://wa.me/8801978847746" target="_blank" class="hover:text-emerald-400 transition flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i> <span>হোয়াটসঅ্যাপ</span>
+                </a>
+                <a href="mailto:dulalbisshas987@gmail.com" class="hidden md:flex items-center gap-1 hover:text-emerald-400 transition">
+                    <i class="fa-solid fa-envelope text-emerald-400"></i> <span>dulalbisshas987@gmail.com</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="bg-emerald-600 text-white text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full animate-bounce">
+                    🎉 দেশজুড়ে ক্যাশ অন ডেলিভারি!
+                </span>
+                <a href="https://web.facebook.com/SuperChoiceBDT" target="_blank" class="hover:text-blue-400 transition text-base" title="ফেসবুক পেজ">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-8 sm:top-9 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-11 h-11 bg-brand-navy rounded-xl flex items-center justify-center p-1.5 shadow-md border border-emerald-500/30 group-hover:scale-105 transition-transform">
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <path d="M20 35 L80 35 L75 85 C75 90 70 95 65 95 L35 95 C30 95 25 90 25 85 Z" fill="#10B981" />
+                        <path d="M35 35 C35 15, 65 15, 65 35" fill="none" stroke="#F97316" stroke-width="8" stroke-linecap="round"/>
+                        <circle cx="50" cy="62" r="14" fill="#0F172A" />
+                        <path d="M43 62 L55 55 L52 69 L43 62" fill="#FFFFFF" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 leading-none">
+                        SUPER CHOICE <span class="text-emerald-600">BD</span>
+                    </h1>
+                    <p class="text-[10px] sm:text-xs text-orange-600 font-semibold tracking-wider mt-0.5 uppercase">
+                        Quality You Deserve
+                    </p>
+                </div>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 max-w-md relative">
+                <input type="text" id="searchInput" oninput="filterProducts()" placeholder="পণ্য খুঁজুন (যেমন: ঘি, পাঞ্জাবি, এয়ারবাড)..." 
+                       class="w-full bg-slate-100 border border-slate-300 rounded-full py-2 pl-4 pr-10 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white transition">
+                <button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-emerald-600">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3 sm:gap-5">
+                <a href="https://wa.me/8801978847746?text=Hello!%20I%20want%20to%20know%20more%20about%20your%20products." 
+                   target="_blank" 
+                   class="hidden sm:flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 px-3 py-1.5 rounded-full text-xs font-semibold transition">
+                    <i class="fa-brands fa-whatsapp text-lg text-emerald-600"></i>
+                    <span>সরাসরি মেসেজ</span>
+                </a>
+
+                <!-- Cart Button Trigger -->
+                <button onclick="toggleCartDrawer()" class="relative bg-slate-100 hover:bg-emerald-50 text-slate-800 hover:text-emerald-600 p-2.5 rounded-full transition flex items-center justify-center">
+                    <i class="fa-solid fa-bag-shopping text-xl"></i>
+                    <span id="cartBadge" class="absolute -top-1 -right-1 bg-orange-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">
+                        0
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Search Bar -->
+        <div class="px-4 pb-3 md:hidden">
+            <div class="relative">
+                <input type="text" id="mobileSearchInput" oninput="syncMobileSearch()" placeholder="পণ্য খুঁজুন..." 
+                       class="w-full bg-slate-100 border border-slate-300 rounded-full py-1.5 pl-4 pr-10 text-xs focus:outline-none focus:border-emerald-500">
+                <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider Banner -->
+    <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-950 text-white py-8 sm:py-12 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center relative z-10">
+            <div class="space-y-4 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/40 px-3 py-1 rounded-full text-emerald-300 text-xs font-medium">
+                    <i class="fa-solid fa-shield-halved"></i> BUILT ON TRUST - শতভাগ বিশ্বস্ত প্রতিষ্ঠান
+                </div>
+                <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+                    সেরা মানের অর্গানিক ফুড, ফ্যাশন ও গ্যাজেটের নির্ভরযোগ্য নাম!
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base max-w-lg">
+                    আপনার দৈনন্দিন জীবনের প্রয়োজনীয় সব সেরা কোয়ালিটির প্রোডাক্ট পান একই ছাদের নিচে। সরাসরি হোম ডেলিভারি ও দেখিয়া মূল্য পরিশোধের সুযোগ।
+                </p>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
+                    <a href="#productsSection" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-2.5 rounded-full text-sm shadow-lg shadow-emerald-900/40 transition">
+                        কেনাকাটা শুরু করুন <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                    <a href="tel:01978847746" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-semibold px-5 py-2.5 rounded-full text-sm transition">
+                        <i class="fa-solid fa-phone text-emerald-400 mr-1"></i> কল করুন
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Feature Cards -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl text-center hover:bg-white/15 transition">
+                    <div class="w-10 h-10 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        <i class="fa-solid fa-bowl-food"></i>
+                    </div>
+                    <h3 class="font-bold text-sm">অর্গানিক ফুড</h3>
+                    <p class="text-[11px] text-slate-300 mt-0.5">১০০% খাঁটি ও প্রাকৃতিক</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl text-center hover:bg-white/15 transition">
+                    <div class="w-10 h-10 bg-orange-500/20 text-orange-400 rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3 class="font-bold text-sm">প্রিমিয়াম পোশাক</h3>
+                    <p class="text-[11px] text-slate-300 mt-0.5">আকর্ষণীয় ডিজাইন</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl text-center hover:bg-white/15 transition">
+                    <div class="w-10 h-10 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <h3 class="font-bold text-sm">ইলেকট্রিক গ্যাজেট</h3>
+                    <p class="text-[11px] text-slate-300 mt-0.5">লেটেস্ট টেকনোলজি</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl text-center hover:bg-white/15 transition">
+                    <div class="w-10 h-10 bg-red-500/20 text-red-400 rounded-full flex items-center justify-center mx-auto mb-2 text-lg">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-bold text-sm">দ্রুত ডেলিভারি</h3>
+                    <p class="text-[11px] text-slate-300 mt-0.5">২৪-৪৮ ঘণ্টার মধ্যে</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8 w-full" id="productsSection">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
+            <div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">আমাদের ক্যাটাগরি সমূহ</h2>
+                <p class="text-xs sm:text-sm text-slate-500">আপনার পছন্দের ক্যাটাগরি বেছে নিন</p>
+            </div>
+
+            <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none">
+                <button onclick="filterCategory('all')" id="btn-all" class="cat-btn active bg-emerald-600 text-white px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition shadow-sm">
+                    সব পণ্য (All)
+                </button>
+                <button onclick="filterCategory('food')" id="btn-food" class="cat-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition shadow-sm">
+                    🍎 অর্গানিক ফুড
+                </button>
+                <button onclick="filterCategory('clothing')" id="btn-clothing" class="cat-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition shadow-sm">
+                    👕 ফ্যাশন ও পোশাক
+                </button>
+                <button onclick="filterCategory('gadgets')" id="btn-gadgets" class="cat-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition shadow-sm">
+                    🎧 ইলেকট্রিক গ্যাজেট
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            <!-- Dynamic JavaScript Product Injection -->
+        </div>
+
+    </main>
+
+    <!-- Trust Features Banner -->
+    <section class="bg-white border-y border-slate-200 py-8 px-4 my-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-3">
+                <i class="fa-solid fa-circle-check text-3xl text-emerald-600 mb-2"></i>
+                <h4 class="font-bold text-sm text-slate-800">১০০% অরিজিনাল পণ্য</h4>
+                <p class="text-xs text-slate-500 mt-1">গুণগত মান নিশ্চিত করা হয়</p>
+            </div>
+            <div class="p-3">
+                <i class="fa-solid fa-hand-holding-dollar text-3xl text-emerald-600 mb-2"></i>
+                <h4 class="font-bold text-sm text-slate-800">ক্যাশ অন ডেলিভারি</h4>
+                <p class="text-xs text-slate-500 mt-1">পণ্য হাতে পেয়ে পেমেন্ট দিন</p>
+            </div>
+            <div class="p-3">
+                <i class="fa-solid fa-truck-ramp-box text-3xl text-emerald-600 mb-2"></i>
+                <h4 class="font-bold text-sm text-slate-800">দ্রুত ও নিরাপদ শিপিং</h4>
+                <p class="text-xs text-slate-500 mt-1">সমগ্র বাংলাদেশে হোম ডেলিভারি</p>
+            </div>
+            <div class="p-3">
+                <i class="fa-solid fa-headset text-3xl text-emerald-600 mb-2"></i>
+                <h4 class="font-bold text-sm text-slate-800">২৪/৭ কাস্টমার সাপোর্ট</h4>
+                <p class="text-xs text-slate-500 mt-1">কল করুন: ০১৯৭৮৮৪৭৭৪৬</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Drawer Modal Overlay -->
+    <div id="cartDrawerOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden transition-opacity" onclick="toggleCartDrawer()"></div>
+
+    <!-- Sliding Cart Drawer -->
+    <div id="cartDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Cart Header -->
+        <div class="p-4 bg-brand-navy text-white flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bag-shopping text-emerald-400"></i>
+                <h3 class="font-bold text-lg">আপনার শপিং ব্যাগ</h3>
+            </div>
+            <button onclick="toggleCartDrawer()" class="text-slate-300 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Shipping Progress Bar -->
+        <div class="bg-emerald-50 p-3 border-b border-emerald-100 text-xs">
+            <p id="freeShippingText" class="text-slate-700 font-semibold mb-1">৳২০০০ টাকার অর্ডারে ফ্রি ডেলিভারি!</p>
+            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                <div id="freeShippingBar" class="bg-emerald-600 h-full w-0 transition-all duration-300"></div>
+            </div>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartItemsContainer" class="flex-grow p-4 overflow-y-auto space-y-3">
+            <!-- Dynamic Cart Items -->
+        </div>
+
+        <!-- Cart Footer -->
+        <div class="p-4 bg-slate-50 border-t border-slate-200 space-y-3">
+            <div class="flex justify-between text-slate-600 text-sm">
+                <span>মোট পণ্য মূল্য:</span>
+                <span id="cartSubtotal" class="font-bold text-slate-900">৳0</span>
+            </div>
+            <p class="text-[11px] text-slate-500">* ডেলিভারি চার্জ অর্ডার কনফার্মেশনের সময় যোগ হবে</p>
+            <button onclick="openCheckoutModal()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                <span>অর্ডার সম্পন্ন করুন</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Order Checkout Modal -->
+    <div id="checkoutModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-lg w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden my-auto">
+            <!-- Modal Header -->
+            <div class="bg-brand-navy text-white px-5 py-3.5 flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-lg">সহজ অর্ডার ফরম</h3>
+                    <p class="text-xs text-emerald-400">তথ্য পূরণ করে অর্ডার কনফার্ম করুন</p>
+                </div>
+                <button onclick="closeCheckoutModal()" class="text-slate-300 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Form -->
+            <div class="p-5 overflow-y-auto space-y-4 flex-grow">
+                
+                <!-- Order Summary Mini Box -->
+                <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                    <h4 class="font-bold text-xs text-slate-500 uppercase tracking-wider mb-2">অর্ডার সামারি</h4>
+                    <div id="checkoutSummaryItems" class="space-y-1 text-xs border-b border-slate-200 pb-2 max-h-28 overflow-y-auto">
+                        <!-- Dynamic Checkout Items -->
+                    </div>
+                    <div class="pt-2 text-xs space-y-1">
+                        <div class="flex justify-between">
+                            <span>পণ্য সাবটোটাল:</span>
+                            <span id="checkoutSubtotal">৳0</span>
+                        </div>
+                        <div class="flex justify-between text-emerald-700">
+                            <span>ডেলিভারি চার্জ:</span>
+                            <span id="checkoutDeliveryCharge">৳৬০</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-sm text-slate-900 pt-1 border-t border-slate-200">
+                            <span>সর্বমোট মূল্য:</span>
+                            <span id="checkoutGrandTotal" class="text-emerald-600">৳0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Details Form -->
+                <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">আপনার নাম *</label>
+                        <input type="text" id="custName" required placeholder="আপনার পুরো নাম লিখুন" 
+                               class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">মোবাইল নম্বর *</label>
+                        <input type="tel" id="custPhone" required placeholder="১১ ডিজিটের মোবাইল নম্বর" pattern="[0-9]{11}" 
+                               class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">ডেলিভারি এলাকা সিলেক্ট করুন *</label>
+                        <select id="custArea" onchange="updateDeliveryCharge()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white">
+                            <option value="inside">ঢাকা সিটি ভিতর (৳৬০)</option>
+                            <option value="outside">ঢাকার বাহিরে (৳১২০)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">সম্পূর্ণ ঠিকানা *</label>
+                        <textarea id="custAddress" required rows="2" placeholder="বাড়ি নম্বর, রোড নম্বর, এলাকা ও থানার নাম লিখুন" 
+                                  class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white"></textarea>
+                    </div>
+
+                    <!-- Payment Method Selector -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">পেমেন্ট মেথড</label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="border rounded-lg p-2 flex items-center gap-2 cursor-pointer bg-emerald-50/50 border-emerald-500 text-xs font-medium">
+                                <input type="radio" name="payment" value="cod" checked class="text-emerald-600 focus:ring-emerald-500">
+                                <span>ক্যাশ অন ডেলিভারি</span>
+                            </label>
+                            <label class="border rounded-lg p-2 flex items-center gap-2 cursor-pointer border-slate-200 text-xs font-medium hover:bg-slate-50">
+                                <input type="radio" name="payment" value="bkash" class="text-emerald-600">
+                                <span>বিকাশ / নগদ</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Buttons -->
+                    <div class="pt-2 space-y-2">
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>অর্ডার নিশ্চিত করুন (ক্যাশ অন ডেলিভারি)</span>
+                        </button>
+                        <button type="button" onclick="sendWhatsAppOrder()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 rounded-xl shadow transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>হোয়াটসঅ্যাপে সরাসরি অর্ডার পাঠাও</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Sales Notification Popup -->
+    <div id="liveSalePopup" class="fixed bottom-4 left-4 z-40 bg-white border border-slate-200 shadow-xl rounded-2xl p-3 max-w-xs flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-500">
+        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-lg">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="text-xs">
+            <p id="popupText" class="font-bold text-slate-800">মিরপুর থেকে তানভির ১টি স্মার্টওয়াচ অর্ডার করেছেন</p>
+            <p class="text-[10px] text-emerald-600 mt-0.5"><i class="fa-solid fa-clock"></i> <span id="popupTime">১ মিনিট আগে</span></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-slate-300 mt-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Brand Info -->
+            <div class="space-y-3">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-slate-900 font-bold">
+                        SC
+                    </div>
+                    <span class="text-xl font-bold text-white tracking-wide">SUPER CHOICE BD</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    BUILT ON TRUST & Quality You Deserve. আমরা সর্বোচ্চ বিশ্বস্ততার সাথে গুণগত মানের খাদ্য, পোশাক ও প্রযুক্তি পণ্য পৌঁছে দিই গ্রাহকের কাছে।
+                </p>
+            </div>
+
+            <!-- Contact Details -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3 border-b border-slate-800 pb-2">যোগাযোগের ঠিকানা</h4>
+                <ul class="space-y-2 text-xs">
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-emerald-400"></i>
+                        <span>০১৯৭৮৮৪৭৭৪৬</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        <span>০১৯৭৮৮৪৭৭৪৬ (হোয়াটসঅ্যাপ)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-emerald-400"></i>
+                        <span>dulalbisshas987@gmail.com</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-brands fa-facebook text-emerald-400"></i>
+                        <a href="https://web.facebook.com/SuperChoiceBDT" target="_blank" class="hover:underline">Facebook Page</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3 border-b border-slate-800 pb-2">গুরুত্বপূর্ণ লিংক</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#productsSection" class="hover:text-emerald-400 transition">সকল পণ্য</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">প্রাইভেসী পলিসি</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">টার্মস ও কন্ডিশন</a></li>
+                    <li><a href="#" class="hover:text-emerald-400 transition">রিটার্ন ও রিফান্ড নীতি</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter & Payment Icons -->
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3 border-b border-slate-800 pb-2">পেমেন্ট মেথড</h4>
+                <p class="text-xs text-slate-400 mb-3">ক্যাশ অন ডেলিভারি, বিকাশ, নগদ সহ সব মাধ্যমে নিরাপদে মূল্য পরিশোধের সুযোগ।</p>
+                <div class="flex gap-2">
+                    <span class="bg-slate-800 border border-slate-700 px-2 py-1 rounded text-[10px] text-emerald-400 font-bold">COD</span>
+                    <span class="bg-slate-800 border border-slate-700 px-2 py-1 rounded text-[10px] text-pink-400 font-bold">bKash</span>
+                    <span class="bg-slate-800 border border-slate-700 px-2 py-1 rounded text-[10px] text-orange-400 font-bold">Nagad</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-950 py-4 text-center text-xs text-slate-500 border-t border-slate-800">
+            Copyright © 2026 <span class="text-emerald-400 font-semibold">SUPER CHOICE BD</span>. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. PRODUCT DATABASE ---
+        const products = [
+            // FOOD PRODUCTS
+            {
+                id: 1,
+                name: "প্রিমিয়াম খাঁটি সুন্দরবনের মধু (৫০০ গ্রাম)",
+                category: "food",
+                price: 850,
+                oldPrice: 1050,
+                rating: 5,
+                tag: "খাঁটি অর্গানিক",
+                image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&auto=format&fit=crop&q=80"
+            },
+            {
+                id: 2,
+                name: "খাঁটি গাওয়া ঘি (১ কেজি)",
+                category: "food",
+                price: 1450,
+                oldPrice: 1700,
+                rating: 5,
+                tag: "সেরা সেলার",
+                image: "https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?w=500&auto=format&fit=crop&q=80"
+            },
+            {
+                id: 3,
+                name: "রয়াল ড্রাই ফ্রুটস ও বাদাম মিক্স (৫০০ গ্রাম)",
+                category: "food",
+                price: 950,
+                oldPrice: 1200,
+                rating: 4.9,
+                tag: "পাওয়ারপ্যাক",
+                image: "https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=500&auto=format&fit=crop&q=80"
+            },
+            {
+                id: 4,
+                name: "কোল্ড প্রেসড খাঁটি সরিষার তেল (১ লিটার)",
+                category: "food",
+                price: 360,
+                oldPrice: 420,
+                rating: 4.8,
+                tag: "অর্গানিক",
+                image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=80"
+            },
+
+            // CLOTHING PRODUCTS
+            {
+                id: 5,
+                name: "প্রিমিয়াম কটন এক্সক্লুসিভ পাঞ্জাবি",
+                category: "clothing",
+                price: 1650,
+                oldPrice: 2200,
+                rating: 4.9,
+                tag: "হট ট্রেন্ড",
+                image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500&auto=format&fit=crop&q=80"
+            },
+            {
+                id: 6,
+                name: "১০০% কটন ক্যাজুয়াল টি-শার্ট (কম্বো ব্যাক)",
+                category: "clothing",
+                price: 790,
+                oldPrice: 1100,
+                rating: 4.7,
+                tag: "বেস্ট ভ্যালু",
+                image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&auto=format&fit=crop&q=80"
+            },
+            {
+                id: 7,
+                name: "অভিজাত ট্রেডিশনাল জামদানি শাড়ি",
+                category: "clothing",
+                price: 2850,
+                oldPrice: 3500,
+                rating: 5,
+                tag: "প্রিমিয়াম",
+                image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&auto=format&fit=crop&q=80"
+            },
+
+            // GADGET PRODUCTS
+            {
+                id: 8,
+                name: "TWS ওয়্যারলেস ব্লুটুথ ইয়ারবাডস (Heavy Bass)",
+                category: "gadgets",
+                price: 1250,
+                oldPrice: 1800,
+                rating: 4.9,
+                tag: "গ্যাজেট স্পেশাল",
+                image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&auto=format&fit=crop&q=80"
+            },
+            {
+                id: 9,
+                name: "স্মার্ট ফিটনেস ফিচার ওয়াচ (Full Touch)",
+                category: "gadgets",
+                price: 1950,
+                oldPrice: 2600,
+                rating: 4.8,
+                tag: "জনপ্রিয়",
+                image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&auto=format&fit=crop&q=80"
+            },
+            {
+                id: 10,
+                name: "২০০০০ এমএএইচ ফাস্ট চার্জিং পাওয়ার ব্যাংক",
+                category: "gadgets",
+                price: 1550,
+                oldPrice: 2100,
+                rating: 4.9,
+                tag: "মেগা পাওয়ার",
+                image: "https://images.unsplash.com/photo-1609592807984-25e40ee8cfbe?w=500&auto=format&fit=crop&q=80"
+            }
+        ];
+
+        // --- 2. APP STATE ---
+        let cart = [];
+        let currentFilter = 'all';
+
+        // --- 3. INITIALIZATION ---
+        window.onload = function() {
+            renderProducts();
+            startLiveSalesPopups();
+        };
+
+        // --- 4. RENDER PRODUCTS GRID ---
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const searchVal = (document.getElementById('searchInput').value || document.getElementById('mobileSearchInput').value || '').toLowerCase();
+
+            const filtered = products.filter(p => {
+                const matchesCat = (currentFilter === 'all' || p.category === currentFilter);
+                const matchesSearch = p.name.toLowerCase().includes(searchVal);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-400">
+                        <i class="fa-solid fa-box-open text-4xl mb-2"></i>
+                        <p class="text-sm">কোনো পণ্য পাওয়া যায়নি!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(p => `
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col group">
+                    <div class="relative overflow-hidden aspect-square bg-slate-100">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-2 left-2 bg-orange-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
+                            ${p.tag}
+                        </span>
+                    </div>
+                    <div class="p-3.5 flex flex-col flex-grow">
+                        <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 text-[11px] font-bold ml-0.5">${p.rating}</span>
+                        </div>
+                        <h3 class="font-bold text-xs sm:text-sm text-slate-800 line-clamp-2 leading-tight mb-2 flex-grow">
+                            ${p.name}
+                        </h3>
+                        <div class="flex items-baseline gap-2 mb-3">
+                            <span class="text-base sm:text-lg font-extrabold text-emerald-600">৳${p.price}</span>
+                            <span class="text-xs text-slate-400 line-through">৳${p.oldPrice}</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-1.5 pt-1">
+                            <button onclick="addToCart(${p.id})" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold py-2 px-2 rounded-xl text-[11px] transition flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-cart-plus"></i> ব্যাগ
+                            </button>
+                            <button onclick="quickBuy(${p.id})" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-2 rounded-xl text-[11px] transition shadow flex items-center justify-center gap-1">
+                                অর্ডার
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- 5. CATEGORY & SEARCH HANDLERS ---
+        function filterCategory(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+            const activeBtn = document.getElementById(`btn-${cat}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-700');
+                activeBtn.classList.add('bg-emerald-600', 'text-white');
+            }
+            renderProducts();
+        }
+
+        function filterProducts() {
+            renderProducts();
+        }
+
+        function syncMobileSearch() {
+            document.getElementById('searchInput').value = document.getElementById('mobileSearchInput').value;
+            renderProducts();
+        }
+
+        // --- 6. CART MANAGEMENT ---
+        function addToCart(productId) {
+            const prod = products.find(p => p.id === productId);
+            const exist = cart.find(item => item.id === productId);
+
+            if (exist) {
+                exist.qty += 1;
+            } else {
+                cart.push({ ...prod, qty: 1 });
+            }
+
+            updateCartUI();
+            toggleCartDrawer(true);
+        }
+
+        function updateCartQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            // Count Total
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            document.getElementById('cartBadge').innerText = totalCount;
+            document.getElementById('cartSubtotal').innerText = `৳${subtotal}`;
+
+            // Free Shipping Bar (Target: 2000 BDT)
+            const target = 2000;
+            const freeBar = document.getElementById('freeShippingBar');
+            const freeText = document.getElementById('freeShippingText');
+
+            if (subtotal >= target) {
+                freeBar.style.width = '100%';
+                freeText.innerText = "🎉 অভিনন্দন! আপনি ফ্রি ডেলিভারি পাচ্ছেন!";
+            } else {
+                const pct = Math.min(100, (subtotal / target) * 100);
+                freeBar.style.width = `${pct}%`;
+                freeText.innerText = `৳${target - subtotal} টাকার কেনাকাটা করলে পাচ্ছেন ফ্রি ডেলিভারি!`;
+            }
+
+            // Render Cart Container
+            const container = document.getElementById('cartItemsContainer');
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-slate-400">
+                        <i class="fa-solid fa-basket-shopping text-4xl mb-2"></i>
+                        <p class="text-xs">আপনার ব্যাগ বর্তমানে খালি</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="flex items-center gap-3 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                    <img src="${item.image}" class="w-12 h-12 rounded-lg object-cover">
+                    <div class="flex-grow min-w-0">
+                        <h4 class="font-bold text-xs text-slate-800 truncate">${item.name}</h4>
+                        <p class="text-xs text-emerald-600 font-bold mt-0.5">৳${item.price}</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="updateCartQty(${item.id}, -1)" class="w-6 h-6 bg-slate-200 rounded-full flex items-center justify-center text-xs font-bold">-</button>
+                        <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
+                        <button onclick="updateCartQty(${item.id}, 1)" class="w-6 h-6 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleCartDrawer(open) {
+            const drawer = document.getElementById('cartDrawer');
+            const overlay = document.getElementById('cartDrawerOverlay');
+
+            if (open === true || drawer.classList.contains('translate-x-full')) {
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+            } else {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+            }
+        }
+
+        // --- 7. CHECKOUT & ORDER MODAL ---
+        function quickBuy(productId) {
+            addToCart(productId);
+            openCheckoutModal();
+        }
+
+        function openCheckoutModal() {
+            if (cart.length === 0) {
+                alert("আপনার কার্টে কোনো পণ্য নেই!");
+                return;
+            }
+            toggleCartDrawer(false);
+            updateCheckoutSummary();
+            document.getElementById('checkoutModal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.add('hidden');
+        }
+
+        function updateDeliveryCharge() {
+            updateCheckoutSummary();
+        }
+
+        function updateCheckoutSummary() {
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const area = document.getElementById('custArea').value;
+            let delivery = area === 'inside' ? 60 : 120;
+
+            // Free delivery if >= 2000 BDT
+            if (subtotal >= 2000) delivery = 0;
+
+            const grandTotal = subtotal + delivery;
+
+            document.getElementById('checkoutSubtotal').innerText = `৳${subtotal}`;
+            document.getElementById('checkoutDeliveryCharge').innerText = delivery === 0 ? "ফ্রি" : `৳${delivery}`;
+            document.getElementById('checkoutGrandTotal').innerText = `৳${grandTotal}`;
+
+            const itemsContainer = document.getElementById('checkoutSummaryItems');
+            itemsContainer.innerHTML = cart.map(i => `
+                <div class="flex justify-between">
+                    <span class="truncate max-w-[200px]">${i.name} (x${i.qty})</span>
+                    <span class="font-bold">৳${i.price * i.qty}</span>
+                </div>
+            `).join('');
+        }
+
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const address = document.getElementById('custAddress').value;
+
+            alert(`ধন্যবাদ ${name}! আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। অতি শীঘ্রই আমাদের প্রতিনিধি আপনার সাথে ০১৯৭৮৮৪৭৭৪৬ নম্বর থেকে যোগাযোগ করবেন।`);
+            
+            cart = [];
+            updateCartUI();
+            closeCheckoutModal();
+        }
+
+        function sendWhatsAppOrder() {
+            const name = document.getElementById('custName').value || 'গ্রাহক';
+            const phone = document.getElementById('custPhone').value || 'নম্বর দেয়া হয়নি';
+            const address = document.getElementById('custAddress').value || 'ঠিকানা দেয়া হয়নি';
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const area = document.getElementById('custArea').value;
+            const delivery = subtotal >= 2000 ? 0 : (area === 'inside' ? 60 : 120);
+            const total = subtotal + delivery;
+
+            let text = `*নতুন অনলাইন অর্ডার - SUPER CHOICE BD*\n\n`;
+            text += `*নাম:* ${name}\n`;
+            text += `*মোবাইল:* ${phone}\n`;
+            text += `*ঠিকানা:* ${address}\n\n`;
+            text += `*অর্ডারকৃত পণ্যসমূহ:*\n`;
+            cart.forEach((i, index) => {
+                text += `${index + 1}. ${i.name} x ${i.qty} = ৳${i.price * i.qty}\n`;
+            });
+            text += `\n*সাবটোটাল:* ৳${subtotal}\n`;
+            text += `*ডেলিভারি চার্জ:* ৳${delivery}\n`;
+            text += `*সর্বমোট:* ৳${total}\n`;
+
+            const encoded = encodeURIComponent(text);
+            window.open(`https://wa.me/8801978847746?text=${encoded}`, '_blank');
+        }
+
+        // --- 8. LIVE SALES NOTIFICATIONS ---
+        function startLiveSalesPopups() {
+            const names = ["তানভির", "শফিক", "সাইফুল", "রাফসান", "ফারহানা", "আরিফ"];
+            const locations = ["মিরপুর", "চট্টগ্রাম", "সিলেট", "উত্তরা", "ধানমন্ডি", "রাজশাহী"];
+            const items = ["১টি স্মার্টওয়াচ", "১ কেজি গাওয়া ঘি", "১টি কটন পাঞ্জাবি", "১টি ওয়্যারলেস ইয়ারবাড", "সুন্দরবনের মধু"];
+
+            setInterval(() => {
+                const name = names[Math.floor(Math.random() * names.length)];
+                const loc = locations[Math.floor(Math.random() * locations.length)];
+                const item = items[Math.floor(Math.random() * items.length)];
+
+                const popup = document.getElementById('liveSalePopup');
+                document.getElementById('popupText').innerText = `${loc} থেকে ${name} ${item} অর্ডার করেছেন`;
+                document.getElementById('popupTime').innerText = `মাত্র ১ মিনিট আগে`;
+
+                popup.classList.remove('translate-y-20', 'opacity-0');
+
+                setTimeout(() => {
+                    popup.classList.add('translate-y-20', 'opacity-0');
+                }, 4000);
+            }, 10000);
+        }
+    </script>
+</body>
+</html>
